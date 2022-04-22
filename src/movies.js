@@ -61,13 +61,13 @@ function orderAlphabetically(arr) {
   const firstArray = arr.map(function (el) {
     return el.title
   })
-  const shortened = firstArray.slice(0, 20)
-  const sorted = shortened.sort((a, b) => {
+  const sorted = firstArray.sort((a, b) => {
     if (a < b) return -1;
     if (a > b) return 1;
     if (a === b) return 0;
   })
-  return sorted
+  const shortened = sorted.slice(0, 20)
+  return shortened
 }
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
